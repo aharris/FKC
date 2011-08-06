@@ -7,19 +7,25 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div id="wrapper">
   <header>
+    <div id="logo">
+      <a href="index.php">
+        <img width="365" height="104" alt="First Key Creations" src="images/logo.png">
+      </a>
+    </div>
+  </header>  
   <nav>
     <ul>
-       <li><%= link_to_unless_current "Home", home_path %></li>
-      <li><%= link_to_unless_current "About", about_path %></li>
-      <li><%= link_to_unless_current "First Key", firstkey_path %></li>
-      <li><%= link_to_unless_current "Personal Projects", projects_path %></li>
-      <li><%= link_to_unless_current "Custom Music", music_path %></li>
+      <li><%= link_to "Home", home_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "First Key", firstkey_path %></li>
+      <li><%= link_to "Personal Projects", projects_path %></li>
+      <li><%= link_to "Custom Music", music_path %></li>
     </ul>  
   </nav>  
-  </header>
 
 <%= yield %>
-
+</div>
 </body>
 </html>
