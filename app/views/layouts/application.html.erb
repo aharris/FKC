@@ -17,15 +17,18 @@
   </header>  
   <nav>
     <ul>
-      <li><%= link_to "Home", home_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "First Key", firstkey_path %></li>
-      <li><%= link_to "Personal Projects", projects_path %></li>
-      <li><%= link_to "Custom Music", music_path %></li>
+      <%= link_to_with_current_class "Home", home_path  %>
+      <%= link_to_with_current_class "About", about_path %></li>
+      <%= link_to_with_current_class "First Key", firstkey_path %></li>
+      <%= link_to_with_current_class "Personal Projects", projects_path %></li>
+      <%= link_to_with_current_class "Custom Music", music_path %></li>
     </ul>  
   </nav>  
-
+  <article>
+  <div id="content">
 <%= yield %>
+</div>
+</article>
 </div>
 </body>
 </html>

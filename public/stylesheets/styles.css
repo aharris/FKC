@@ -76,7 +76,7 @@ border-radius:10px;
 	}
 	
 nav li.current{
-	background: url("imgs/nav_note.png") no-repeat scroll 95% 5px #007b90;
+	background: url("/images/nav_note.png") no-repeat scroll 95% 5px #007b90;
 	}						
 
 #wrapper{
