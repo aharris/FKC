@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fkc</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-  <div id="wrapper">
-  <header>
-    <div id="logo">
-      <a href="index.php">
-        <img width="365" height="104" alt="First Key Creations" src="images/logo.png">
-      </a>
-    </div>
-  </header>  
-  <nav>
-    <ul>
-      <%= link_to_with_current_class "Home", home_path  %>
-      <%= link_to_with_current_class "About", about_path %></li>
-      <%= link_to_with_current_class "First Key", firstkey_path %></li>
-      <%= link_to_with_current_class "Personal Projects", projects_path %></li>
-      <%= link_to_with_current_class "Custom Music", music_path %></li>
-    </ul>  
-  </nav>  
-  <article>
-  <div id="content">
-<%= yield %>
-</div>
-</article>
-</div>
-</body>
+  <head>
+    <title>Fkc</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div id="logo">
+          <a href="index.php">
+            <img width="365" height="104" alt="First Key Creations" src="images/logo.png">
+          </a>
+        </div>
+      </header>  
+    <article>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </article>
+    <nav>
+      <ul>
+        <%= link_to_with_current_class "Home", home_path  %>
+        <%= link_to_with_current_class "About", about_path %></li>
+        <%= link_to_with_current_class "First Key", firstkey_path %></li>
+        <%= link_to_with_current_class "Personal Projects", projects_path %></li>
+        <%= link_to_with_current_class "Custom Music", music_path %></li>
+      </ul>  
+    </nav>
+  </div>
+  </body>
 </html>
