@@ -1,2 +1,1 @@
-rvm 1.9.2@fkc
-rvm_project_rvmrc_default=1
+rvm 1.9.3@fkc --install --create
