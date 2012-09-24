@@ -7,11 +7,11 @@ gem 'json'
 gem 'bourbon'
 gem 'jquery-rails'
 
-group :assets do
+# group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
-end
+# end
 
 group :production do
   gem 'pg'
