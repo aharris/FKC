@@ -3,5 +3,7 @@ Fkc::Application.routes.draw do
   get 'about' => 'pages#about' 
   get 'firstkey' => 'pages#firstkey'
   get 'projects' => 'pages#projects'
-  get 'music' => 'pages#music'   
+  get 'music' => 'pages#music'
+  
+  get 'requests' => 'pages#requests'
  end

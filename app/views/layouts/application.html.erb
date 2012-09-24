@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fkc</title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tag %>
-  </head>
-  <body>
-    <div id="wrapper">
-      <header>
-        <div id="logo">
-          <a href="/">
-            <img alt="First Key Creations" src="images/logo.png">
-          </a>
-        </div>
-      </header>  
-    <article>
-      <div id="content">
-        <%= yield %>
+<head>
+  <title>Fkc</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img alt="First Key Creations" src="images/logo.png">
+        </a>
       </div>
-    </article>
-    <nav>
-      <ul>
-        <%= link_to_with_current_class "Home", home_path  %>
-        <%= link_to_with_current_class "About", about_path %></li>
-        <%= link_to_with_current_class "First Key", firstkey_path %></li>
-        <%= link_to_with_current_class "Personal Projects", projects_path %></li>
-        <%= link_to_with_current_class "Custom Music", music_path %></li>
-      </ul>  
-    </nav>
+    </header>  
+    <div class="contentWrap">
+        <div class="content">
+          <%= yield %>
+        </div>
+      <nav>
+        <ul>
+          <%= link_to_with_current_class "Home", home_path  %>
+          <%= link_to_with_current_class "About First Key", firstkey_path %>
+          <%= link_to_with_current_class "Custom Music", music_path %>
+          <%= link_to_with_current_class "Personal Projects", projects_path %>
+        </ul>
+      </nav>
+      <div class="bannerImage"><img src="/images/listen_create_enjoy.png" alt="Listen Create Enjoy"></div>
+    </div>
+    <div class="socialMedia">
+      <div class="socialFb"><a href="http://www.facebook.com/justin.rayna" target="_blank"><img src="/images/fb.png" width="70" height="70" alt="Fb"></div>
+      <div class="socialTwitter"><a href="https://twitter.com/1stKeyCreations" target="_blank"><img src="/images/twitter.png" width="70" height="70" alt="Twitter"></a></div>
+      <div class="socialYoutube"><img src="/images/you_tube.png" width="70" height="70" alt="You Tube"></div>
+    </div>
   </div>
-  </body>
+  <div class="disclaimer">© 2011 First Key Creations. All Rights Reserved</div>
+</body>
 </html>
