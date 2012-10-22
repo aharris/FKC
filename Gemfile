@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source :rubygems
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.2'
 gem 'thin'
 gem 'heroku'
 gem 'json'
@@ -8,9 +8,9 @@ gem 'bourbon'
 gem 'jquery-rails'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
 group :production do
@@ -19,6 +19,6 @@ end
 
 group :development do
   gem 'foreman'
-  gem 'sqlite3', '1.3.4'
+  gem 'sqlite3'
 end
 
