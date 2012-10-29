@@ -7,4 +7,7 @@ Fkc::Application.routes.draw do
   get 'testimonials' => 'pages#testimonials'
 
   get 'requests' => 'pages#requests'
+
+  get  "contact", :to => "contact#new", :as => "contact"
+  post "contact", :to => "contact#create"
  end

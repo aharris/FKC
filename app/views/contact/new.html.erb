@@ -1,0 +1,37 @@
+<div class="contentWrap">
+  <div class="indent">
+    <div class="content">
+      <%= form_for @contact, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
+
+        <%= f.text_field :name, :placeholder => "Name" %>
+        <br />
+
+        <%= f.text_field :email, :placeholder => "Email" %>
+        <br />
+
+        <%= f.text_field :subject, :placeholder => "Subject" %>
+        <br />
+
+        <%= f.text_area :body, :placeholder => "Message" %>
+        <div class="humanTest">Are you human?
+        <%= f.label :verify, "3 + 1 =" %>
+        <%= f.text_field :verify %></div>
+        <br />
+        <div class="submitBtn">
+        <%= f.submit "Submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+   <div class="sidebar">
+      <h3>Contact Me</h3>
+      <p>Thanks for visiting my site!
+        <br/>
+        <br/>
+         Feel free to contact me with any questions, comments, or projects.</p>
+      <div class="button availability">
+        I am currently available for freelance work
+        </div>
+
+  </div>
+</div>
