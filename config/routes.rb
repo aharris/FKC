@@ -3,11 +3,10 @@ Fkc::Application.routes.draw do
   get 'about' => 'pages#about'
   get 'ourstory' => 'pages#ourstory'
   get 'projects' => 'pages#projects'
-  get 'music' => 'pages#music'
   get 'testimonials' => 'pages#testimonials'
 
   get 'requests' => 'pages#requests'
 
-  get  "contact", :to => "contact#new", :as => "contact"
+  get  "custom_music", :to => "contact#new", :as => "custom_music"
   post "contact", :to => "contact#create"
  end

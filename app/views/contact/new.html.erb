@@ -1,37 +1,109 @@
-<div class="contentWrap">
-  <div class="indent">
-    <div class="content">
-      <%= form_for @contact, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
+<h1>Contact Me</h1>
+<%= form_for @contact, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
 
-        <%= f.text_field :name, :placeholder => "Name" %>
-        <br />
+  <div class="form-row">
+    <label>First Name:</label>
+    <%= f.text_field :firstName, :placeholder => "First Name" %>
+    <label>Last Name</label>
+    <%= f.text_field :lastName, :placeholder => "Last Name" %>
+  </div>
 
-        <%= f.text_field :email, :placeholder => "Email" %>
-        <br />
+  <div class="form-row">
+    <label>Address:</label>
+    <%= f.text_field :address, :placeholder => "Address" %>
+  </div>
 
-        <%= f.text_field :subject, :placeholder => "Subject" %>
-        <br />
+  <div class="form-row">
+    <label>Phone:</label>
+    <%= f.text_field :phone, :placeholder => "Phone" %>
+  </div>
 
-        <%= f.text_area :body, :placeholder => "Message" %>
-        <div class="humanTest">Are you human?
-        <%= f.label :verify, "3 + 1 =" %>
-        <%= f.text_field :verify %></div>
-        <br />
-        <div class="submitBtn">
-        <%= f.submit "Submit" %>
-        </div>
-      <% end %>
+  <div class="form-row">
+    <label>Email:</label>
+    <%= f.text_field :email, :placeholder => "Email" %>
+  </div>
+
+  <div class="form-row">
+    <label>What will this music be used for?</label>
+    <%= f.text_area :purpose, :rows => 6, :placeholder => "Halftime Show." %>
+  </div>
+
+  <div class="form-row">
+    <label>What is the desired length for this piece of music?</label>
+    <%= f.text_field :length, :placeholder => "5 min." %>
+  </div>
+
+  <div class="form-row">
+    <label>Date by which you wish to receive music:</label>
+    <%= select_date Date.today, :prefix => :start_date %>
+  </div>
+  <p class="note"><strong>Disclaimer:</strong> As a small company, service is provided on a first-come, first-serve basis. We try to meet all of our deadlines and work for as many people as we can. Unfortunately we cannot guarantee your spot until we have processed your request. Project time frames vary due to size and our volume of requests fluctuates with various seasons.</p>
+
+  <div class="form-row">
+    <label>Genre:</label>
+    <div class="radio-buttons">
+      <%= radio_button_tag(:genre, "pop") %>
+      <%= label_tag("Pop") %>
+      <%= radio_button_tag(:genre, "rock") %>
+      <%= label_tag("Rock") %>
+      <%= radio_button_tag(:genre, "r&b") %>
+      <%= label_tag("R & B") %>
+      <%= radio_button_tag(:genre, "jazz") %>
+      <%= label_tag("Jazz") %>
+      <%= radio_button_tag(:genre, "latin") %>
+      <%= label_tag("Latin") %>
+      <%= radio_button_tag(:genre, "Orchestral") %>
+      <%= label_tag("Orchestral") %>
+      <%= radio_button_tag(:genre, "Hip-hop") %>
+      <%= label_tag("Hip-hop") %>
+      <%= radio_button_tag(:genre, "Christian") %>
+      <%= label_tag("Christian") %>
+      <label>Other:</label>
+      <%= text_field :other, :placeholder => "Mixed" %>
     </div>
   </div>
-   <div class="sidebar">
-      <h3>Contact Me</h3>
-      <p>Thanks for visiting my site!
-        <br/>
-        <br/>
-         Feel free to contact me with any questions, comments, or projects.</p>
-      <div class="button availability">
-        I am currently available for freelance work
-        </div>
 
+  <div class="form-row">
+    <label>Please include a brief description of the style desired for your music. Including a particular artist or song as a stylistic reference is a good tip. </label>
+    <%= f.text_area :reference, :rows => 6, :placeholder => "New Kid on the Block" %>
   </div>
-</div>
+
+  <div class="form-row">
+    <label>Instrumentation: Please select as few or as many instruments as you would like. I will select complimentary instruments for the genre you have chosen as fit the music.</label>
+    <div class="check-boxes">
+      <%= f.check_box(:brass) %>
+      <%= label_tag("Brass") %>
+      <%= f.check_box(:piano) %>
+      <%= label_tag("Keys/Piano") %>
+      <%= f.check_box(:synth) %>
+      <%= label_tag("Synth") %>
+      <%= f.check_box(:guitar) %>
+      <%= label_tag("Guitar") %>
+      <%= f.check_box(:bass_guitar) %>
+      <%= label_tag("Bass Guitar") %>
+      <%= f.check_box(:sub) %>
+      <%= label_tag("Sub") %>
+      <%= f.check_box(:drums) %>
+      <%= label_tag("Drums") %>
+      <%= f.check_box(:percussion) %>
+      <%= label_tag("Percussion") %>
+      <%= f.check_box(:strings) %>
+      <%= label_tag("Strings") %>
+      <label>Other:</label>
+      <%= text_field :mixed, :placeholder => "Mixed" %>
+      <%= f.check_box(:composer) %>
+      <%= label_tag("Leave it up to the composer!") %>
+    </div>
+  </div>
+
+
+  <div class="humanTest">Are you human?
+    <%= f.label :verify, "3 + 1 =" %>
+    <%= f.text_field :verify %>
+  </div>
+
+  <div class="submitBtn">
+    <%= f.submit "Submit" %>
+  </div>
+
+<% end %>
