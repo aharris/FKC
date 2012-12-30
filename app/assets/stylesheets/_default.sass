@@ -25,6 +25,11 @@ strong
 em
   font-style: oblique
 
+sub
+  font-size: small
+  color: gray
+  font-weight: normal
+
 img
   max-width: 100%
 
@@ -38,6 +43,12 @@ img
   +border-radius(4px)
   float: left
   margin-right: 20px
+  max-width: 150px
+
+.content-image-right
+  +border-radius(4px)
+  float: right
+  margin-left: 20px
   max-width: 150px
 
 .content
@@ -73,6 +84,8 @@ h2
 p
   line-height: 150%
   margin-bottom: 15px
+  clear: both
+  +clearfix
   &.note
     line-height: 130%
     font-size: 12px
