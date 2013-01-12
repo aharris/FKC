@@ -11,6 +11,7 @@ Fkc::Application.routes.draw do
 
   get 'music' => 'pages#music'
   get 'testimonials' => 'pages#testimonials'
+  get 'wesupport' => 'pages#wesupport'
 
   get 'requests' => 'pages#requests'
  end
