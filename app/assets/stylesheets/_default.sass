@@ -318,14 +318,16 @@ ol.playlist
 
 @media only screen and (max-width: 480px)
   .audiojs
-    width: 300px
+    width: 280px
     .scrubber
-      width: 130px
+      width: 110px
   ol.playlist
-    width: 300px
+    width: 280px
+  .box-art
+    max-width: 280px
 
 .box-art
   display: block
   margin: 20px auto
-  border: 5px solid #666
+  +box-shadow(0 0 0 5px #666)
   +border-radius(3px)
