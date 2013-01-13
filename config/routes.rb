@@ -10,6 +10,9 @@ Fkc::Application.routes.draw do
   match "/projects" => redirect("http://www.ReverbNation.com/FirstKeyCreations"), :as => :projects
 
   get 'music' => 'pages#music'
+  get 'dancemusic' => 'pages#dance_music'
+  get 'gymnasticsmusic' => 'pages#gymnastics_music'
+  get 'musicform' => 'pages#music_form'
   get 'testimonials' => 'pages#testimonials'
   get 'wesupport' => 'pages#wesupport'
 

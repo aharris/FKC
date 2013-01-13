@@ -30,7 +30,7 @@ sub
   color: gray
   font-weight: normal
 
-img
+img, iframe
   max-width: 100%
 
 .logo
@@ -145,6 +145,10 @@ footer p
     font-size: 30px
     font-weight: bold
 
+.custonMusicVideo
+  margin: 20px auto
+  display: block
+
 
 /*******************navigation**************
 nav
@@ -175,6 +179,28 @@ nav
     +border-radius(10px)
     &.current
       background: url("/images/nav_note.png") no-repeat scroll 95% 5px #007b90
+
+.musicNav
+  text-align: center
+  a
+    font-size: 24px
+    line-height: 36px
+    font-weight: bold
+    width: 200px
+    height: 200px
+    margin: 10px
+    padding: 60px 20px 0
+    text-decoration: none
+    background: url("/images/custom_music_note.png") no-repeat scroll 50% 50% #007B90
+    color: #fff
+    text-shadow: 1px 1px rgba(0,0,0,.5)
+    box-sizing: border-box
+    vertical-align: top
+    +inline-block
+    +border-radius(8px)
+    +box-shadow(3px 3px 3px 0 #666)
+    &:hover
+      +box-shadow(inset 3px 3px 3px 0 rgba(0,0,0,.5))
 
 //Subnav
 aside
@@ -249,5 +275,19 @@ aside
   text-align: center
   opacity: .8
 
+//AUDIO PLAYER
+.audioTitle
+  background: #444
+  padding: 5px 20px
+  border-radius: 8px 8px 0 0
+  margin-bottom: 0px
+  z-index: 0
+  display: inline-block
+  color: #CCC
 
+@media only screen and (max-width: 480px)
+  .audiojs
+    width: 300px
+    .scrubber
+      width: 130px
 
