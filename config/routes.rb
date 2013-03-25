@@ -8,6 +8,7 @@ Fkc::Application.routes.draw do
   # Temporary Redirect ---
   # ----------------------
   #match "/projects" => redirect("http://www.ReverbNation.com/FirstKeyCreations"), :as => :projects
+  match "/buydancemusic" => redirect("http://1stkeycreations.bandcamp.com/album/the-competitive-edge-gymnastics-floor-music"), :as => :buydancemusic
 
   get 'music' => 'pages#music'
   get 'dancemusic' => 'pages#dance_music'
