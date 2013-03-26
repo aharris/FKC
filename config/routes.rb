@@ -13,6 +13,7 @@ Fkc::Application.routes.draw do
   get 'music' => 'pages#music'
   get 'dancemusic' => 'pages#dance_music'
   get 'gymnasticsmusic' => 'pages#gymnastics_music'
+  get 'buygymnasticsmusic' => 'pages#buy_gymnastics_music'
   get 'musicform' => 'pages#music_form'
   get 'testimonials' => 'pages#testimonials'
   get 'wesupport' => 'pages#wesupport'

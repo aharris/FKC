@@ -326,6 +326,38 @@ ol.playlist
   background: #F7F7FC
   padding: 1em
   +border-radius(8px)
+  +clearfix
+
+.album-title
+  text-align: left
+  font-size: 1.4em
+  a
+    color: #007b90
+    text-decoration: none
+    &:hover, &:active
+      color: darken(#007b90, 10%)
+
+.album-art
+  float: left
+  margin-right: 2em
+  img
+    +border-radius(2px)
+    +box-shadow(0 0 3px 1px #D1D1D3, inset 0 0 0 2px white)
+
+.track-list
+  float: left
+  width: 300px
+  overflow: hidden
+  iframe
+    margin-left: -100px
+
+.buy-album
+  text-align: left
+  margin: -0.25em 0 0.5em
+  a
+    text-decoration: none
+    color: #4285BB
+    font-weight: bold
 
 @media only screen and (max-width: 480px)
   .audiojs
